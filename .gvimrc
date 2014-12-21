@@ -28,6 +28,11 @@ map <Leader>e :e. <CR>
 map <Leader>q :q! <CR>
 inoremap jj <ESC>
 
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
 " Filetype Customs
 autocmd Filetype html setlocal sw=2 expandtab ts=2
 autocmd Filetype ruby setlocal sw=2 expandtab ts=2
