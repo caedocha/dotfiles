@@ -1,3 +1,5 @@
+setxkbmap -option ctrl:nocaps
+
 alias m='cd ~/maya/2011-x64/scripts'
 alias h='cd ~'
 alias k='clear'
