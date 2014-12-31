@@ -51,4 +51,5 @@ map <Down> <Nop>
 " Filetype Customs
 autocmd Filetype html setlocal sw=2 expandtab ts=2
 autocmd Filetype ruby setlocal sw=2 expandtab ts=2
+autocmd Filetype javascript setlocal sw=2 expandtab ts=2
 autocmd Filetype python setlocal sw=2 noexpandtab ts=2
