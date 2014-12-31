@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'bling/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
@@ -35,6 +36,7 @@ set history=1000
 set autochdir
 set hlsearch
 set noswapfile
+set laststatus=2
 
 " Key Mappings
 map <Leader>v :Vex <CR>
