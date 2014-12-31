@@ -3,3 +3,4 @@ xrandr --auto --output DFP9 --mode 1920x1080 --left-of DFP10 &
 tint2 &
 nitrogen --restore &
 pytyle2 &
+setxkbmap -option caps:none &

@@ -337,6 +337,9 @@
         <command>gnome-screenshot</command>
       </action>
     </keybind>
+    <keybind key="C-space"> <action name="Execute"> <command>dmenu_run</command> </action> </keybind>
+    <keybind key="W-b"> <action name="Execute"> <command>zsh</command> </action> </keybind>
+    <keybind key="W-v"> <action name="Execute"> <command>gvim</command> </action> </keybind>
     <keybind key="C-S-A-Right">  <action name="MoveResizeTo"><monitor>2</monitor></action></keybind>
     <keybind key="C-S-A-Left"> <action name="MoveResizeTo"><monitor>1</monitor></action></keybind>
   </keyboard>
