@@ -39,6 +39,7 @@ set hlsearch
 set noswapfile
 set laststatus=2
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set incsearch
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Key Mappings
