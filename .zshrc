@@ -6,6 +6,7 @@ alias k='clear'
 alias gs='git status'
 alias gb='git branch'
 alias ag='ack-grep'
+alias po='sudo poweroff'
 
 GIT_PROMPT_ONLY_IN_REPO=1
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -14,3 +15,5 @@ export PATH="$PATH:~/maya/2011-x64/scripts/sceneTasks/lib"
 export PYTHONPATH="$PYTHONPATH:~/maya/2011-x64/scripts/sceneTasks"
 export PYTHONPATH="$PYTHONPATH:~/maya/2011-x64/scripts/sceneTasks/lib"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
