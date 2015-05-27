@@ -16,6 +16,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'thoughtbot/vim-rspec'
 
 call vundle#end()
 filetype plugin indent on
@@ -54,8 +57,15 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
+" Rspec.vim mappings
+map <Leader>t :call RunCurrentSpecFile() <CR>
+map <Leader>d :call RunNearestSpec() <CR>
+map <Leader>l :call RunLastSpec() <CR>
+map <Leader>a :call RunAllSpecs() <CR>
+
 " Filetype Customs
 autocmd Filetype html setlocal sw=2 expandtab ts=2
+autocmd Filetype eruby setlocal sw=2 expandtab ts=2
 autocmd Filetype ruby setlocal sw=2 expandtab ts=2
 autocmd Filetype javascript setlocal sw=2 expandtab ts=2
 autocmd Filetype python setlocal sw=2 noexpandtab ts=2
