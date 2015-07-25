@@ -16,4 +16,4 @@ ln -s ~/dotfiles/tint2/tint2rc ~/.config/tint2/tint2rc
 ln -s ~/dotfiles/tint2/tintwizard.conf ~/.config/tint2/tintwizard.conf
 # VIM COLORSCHEME
 rm ~/.vim/colors/gruvbox.vim
-ln -s ~/dotfiles/vim/ ~/.vim/colors/gruvbox.vim
+ln -s ~/dotfiles/vim/ ~/.vim
