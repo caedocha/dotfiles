@@ -84,7 +84,26 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#################
+# General
+#################
+
+# Disable caps lock
 setxkbmap -option ctrl:nocaps
+
+# Disable shared history across zsh shells
+unsetopt share_history
+
+#################
+# GIT
+#################
+
+# Stops oh-my-zsh from being super slow!
+git config --add oh-my-zsh.hide-status 1
+
+#################
+# SHORTCUTS
+#################
 
 alias m='cd ~/maya/2011-x64/scripts'
 alias h='cd ~'
@@ -94,8 +113,12 @@ alias gb='git branch'
 alias ag='ack-grep'
 alias po='sudo poweroff'
 
+#################
+# GLOBAL VARS
+#################
+
 GIT_PROMPT_ONLY_IN_REPO=1
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:~/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:/usr/autodesk/maya/bin"
 export PATH="$PATH:~/maya/2011-x64/scripts/sceneTasks/lib"
 export PYTHONPATH="$PYTHONPATH:~/maya/2011-x64/scripts/sceneTasks"
