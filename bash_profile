@@ -1,16 +1,23 @@
-setxkbmap -option ctrl:nocaps
+# SHORTCUTS
 
-alias m='cd ~/maya/2011-x64/scripts'
+## GENERAL
 alias h='cd ~'
 alias k='clear'
+
+## DEV
 alias gs='git status'
 alias gb='git branch'
 alias ag='ack-grep'
 
-GIT_PROMPT_ONLY_IN_REPO=1
-source ~/.bash-git-prompt/gitprompt.sh
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+## MAYA
+alias m='cd ~/maya/2011-x64/scripts'
+
+# ENV
+
+## RVM & NVM
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+## MAYA
 export PATH="$PATH:/usr/autodesk/maya/bin"
-export PATH="$PATH:~/maya/2011-x64/scripts/sceneTasks/lib"
-export PYTHONPATH="$PYTHONPATH:~/maya/2011-x64/scripts/sceneTasks"
-export PYTHONPATH="$PYTHONPATH:~/maya/2011-x64/scripts/sceneTasks/lib"
