@@ -27,9 +27,6 @@ filetype plugin indent on
 " GUI
 colorscheme gruvbox
 set background=dark
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
 
 " Custom
 let mapleader=","
