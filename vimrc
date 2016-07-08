@@ -1,8 +1,3 @@
-" Pathogen Config
-"execute pathogen#infect()
-"syntax on
-"filetype plugin indent on
-
 " Vundle config
 set nocompatible
 filetype off
@@ -20,8 +15,12 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
+
+" Syntax Setup
+syntax on
 filetype plugin indent on
 
 " GUI
@@ -48,6 +47,7 @@ map <Leader>v :Vex <CR>
 map <Leader>s :Sex <CR>
 map <Leader>e :e. <CR>
 map <Leader>q :q! <CR>
+map <Leader>w :wa <CR>
 inoremap jj <ESC>
 
 map <Left> <Nop>
