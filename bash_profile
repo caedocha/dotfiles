@@ -14,15 +14,24 @@ alias m='cd ~/maya/2011-x64/scripts'
 
 # ENV
 
-## RVM & NVM
-export NVM_DIR="$HOME/.nvm"
+# RVM
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-export NVM_DIR="/Users/carlos/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# NVM
+# export NVM_DIR="$HOME/.nvm"
+# export NVM_DIR="/Users/carlos/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ## MAYA
 export PATH="$PATH:/usr/autodesk/maya/bin"
 
-source ~/.bashrc
+# MYSQL
+
+MYSQL="/usr/local/mysql/bin"
+MYSQL_LIB="/usr/local/mysql/lib"
+export PATH=$PATH:$MYSQL
+export DYLD_LIBRARY_PATH=$MYSQL_LIB:$DYLD_LIBRARY_PATH
+
+source ~/paths
