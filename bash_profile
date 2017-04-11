@@ -7,10 +7,13 @@ alias k='clear'
 ## DEV
 alias gs='git status'
 alias gb='git branch'
-alias ag='ack-grep'
+alias vim='/usr/local/Cellar/vim/7.4.1967/bin/vim'
 
 ## MAYA
 alias m='cd ~/maya/2011-x64/scripts'
+
+# DOCKER
+alias edm='eval $(docker-machine env default)'
 
 # ENV
 
@@ -25,7 +28,10 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ## MAYA
-export PATH="$PATH:/usr/autodesk/maya/bin"
+
+# PG_RESTORE
+PG_BIN="/Applications/Postgres.app/Contents/Versions/9.5/bin"
+export PATH=$PATH:$PG_BIN
 
 # MYSQL
 
