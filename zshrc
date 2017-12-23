@@ -1,12 +1,13 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/home/carlos/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="wezm"
-#ZSH_THEME="robbyrussell"
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/carlos/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -31,7 +32,7 @@ ZSH_THEME="wezm"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -50,14 +51,13 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler rails)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/home/carlos/.rvm/gems/ruby-2.2.0/bin:/home/carlos/.rvm/gems/ruby-2.2.0@global/bin:/home/carlos/.rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/carlos/.rvm/bin:/home/carlos/.rvm/bin:/usr/autodesk/maya/bin:~/maya/2011-x64/scripts/sceneTasks/lib:/home/carlos/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/carlos/.rvm/bin:/usr/autodesk/maya/bin:~/maya/2011-x64/scripts/sceneTasks/lib:/home/carlos/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -73,7 +73,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -83,46 +83,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#################
-# General
-#################
+PATH="$HOME/platform_tools/bin:$PATH"
 
-# Disable caps lock
-setxkbmap -option ctrl:nocaps
-
-# Disable shared history across zsh shells
-unsetopt share_history
-
-#################
-# GIT
-#################
-
-# Stops oh-my-zsh from being super slow!
-git config --add oh-my-zsh.hide-status 1
-
-#################
-# SHORTCUTS
-#################
-
-alias m='cd ~/maya/2011-x64/scripts'
-alias h='cd ~'
-alias k='clear'
-alias gs='git status'
-alias gb='git branch'
-alias ag='ack-grep'
-alias po='sudo poweroff'
-
-#################
-# GLOBAL VARS
-#################
-
-GIT_PROMPT_ONLY_IN_REPO=1
-export PATH="$PATH:~/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:/usr/autodesk/maya/bin"
-export PATH="$PATH:~/maya/2011-x64/scripts/sceneTasks/lib"
-export PYTHONPATH="$PYTHONPATH:~/maya/2011-x64/scripts/sceneTasks"
-export PYTHONPATH="$PYTHONPATH:~/maya/2011-x64/scripts/sceneTasks/lib"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+alias k="clear"
