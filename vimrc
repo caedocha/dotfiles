@@ -20,6 +20,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-markdown'
 Plugin 'vim-scripts/SyntaxRange'
 Plugin 'vim-scripts/ingo-library'
+Plugin 'elixir-editors/vim-elixir'
 
 call vundle#end()
 
