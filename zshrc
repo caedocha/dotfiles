@@ -85,7 +85,20 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/repos/sr_links.sh
 
 PATH="$HOME/platform_tools/bin:$PATH"
 
 alias k="clear"
+# Use Neovim as "preferred editor"
+export VISUAL=nvim
+# Use Neovim instead of Vim or Vi
+alias vim=nvim
+alias vi=nvim
+
+alias g=git
+alias gpb="git checkout -"
+alias gd="git checkout develop"
+alias f="find . -name"
+export VIMCONFIG=~/.config/nvim
+export VIMDATA=~/.local/share/nvim

@@ -9,7 +9,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tomtom/tcomment_vim'
@@ -21,6 +22,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'vim-scripts/SyntaxRange'
 Plugin 'vim-scripts/ingo-library'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
@@ -34,6 +36,9 @@ set background=dark
 
 " Custom
 let mapleader=","
+let g:airline_theme="wombat"
+"let g:airline_powerline_fonts = 1
+set encoding=UTF-8
 set number
 set autoindent
 set list
