@@ -44,7 +44,11 @@ set autoindent
 set list
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set history=1000
-set autochdir
+
+" AUTOCHDIR
+"set autochdir
+"
+autocmd BufEnter * silent! lcd %:p:h
 set hlsearch
 set noswapfile
 set laststatus=2
@@ -73,6 +77,7 @@ map <Leader>q :q! <CR>
 map <Leader>w :set buftype= <CR><bar> :wa<CR> <bar> :echo "All buffers saved!"<CR>
 map <Leader>p :call TogglePaste() <CR>
 inoremap jj <ESC>
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 map <Left> <Nop>
 map <Right> <Nop>
