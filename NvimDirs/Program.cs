@@ -57,7 +57,7 @@ static void PrintHelp()
 			The default is the '~/.config/' dir.
 		--nuke
 			Deletes the entire nvim config.
-		-- help
+		--help
 			Shows the help section.
 		";
 	Console.WriteLine(help);
@@ -88,8 +88,9 @@ if(args.Length > 0 && args.Contains("--nuke"))
 	}
 }
 
-if(parsedArgs.ContainsKey("homeDirOverride") && parsedArgs.TryGetValue("homeDirOverride", out var newHomeDirPath))
+if(parsedArgs.ContainsKey("--homeDirOverride") && parsedArgs.TryGetValue("--homeDirOverride", out var newHomeDirPath))
 {
+	Console.WriteLine($"'--homDireOverride' is present. The nvim config will be create in '{newHomeDirPath}'");
 	Directory.SetCurrentDirectory(newHomeDirPath);
 }
 else
