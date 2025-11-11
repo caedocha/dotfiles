@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.InteropServices;
 
 static void CreateFileIfNotExist(string fileName)
 {
@@ -63,6 +64,20 @@ static void PrintHelp()
 	Console.WriteLine(help);
 }
 
+static string GetHomeDirPath()
+{
+	var userDirPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+	var configPath = ".config";
+
+	if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+	{
+		configPath = "AppData/Local/";
+	}
+	var homeDirPath = Path.Combine(userDirPath, configPath);
+
+	return homeDirPath;
+}
+
 var parsedArgs = ParseArgs(args);
 
 if(parsedArgs.ContainsKey("--help"))
@@ -71,7 +86,8 @@ if(parsedArgs.ContainsKey("--help"))
 	return;
 }
 
-var homeDirPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".config");
+var homeDirPath = GetHomeDirPath();
+
 Console.WriteLine($"Creating default dirs at '{homeDirPath}'");
 if(args.Length > 0 && args.Contains("--nuke"))
 {
