@@ -42,11 +42,15 @@ if(parsedArgs.HasCommands())
 {
   if(parsedArgs.HasMultipleCommands())
   {
-    Console.WriteLine("You are trying to run multilpe commands at the same time. Pick one.");
+    Console.WriteLine("You are trying to run multiple commands at the same time. Pick one.");
   }
   else
   {
-    var createCommand = new CreateCommand(parsedArgs);
+    var command = parsedArgs.GetCommand() switch
+    {
+      "create" => new CreateCommand(parsedArgs),
+    };
+    command.Execute();
   }
 }
 else

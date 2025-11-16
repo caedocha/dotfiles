@@ -14,25 +14,27 @@ namespace Extensions
         .Where(arg => validCommands.Contains(arg.Key))
         .Select(arg => arg.Key)
         .ToList();
+
       return cmds;
     }
 
     public static bool HasCommands(this IDictionary<string, string?> args)
     {
       var keys = args.GetCommandKeys();
-      return keys.Count > 1;
+
+      return keys.Count >= 1;
     }
 
     public static bool HasMultipleCommands(this IDictionary<string, string?> args)
     {
       var keys = args.GetCommandKeys();
+
       return keys.Count >= 2;
     }
 
     public static string GetCommand(this IDictionary<string, string?> args)
     {
-      var keys = args.GetCommandKeys();
-      return keys.Count >= 2;
+      return args.GetCommandKeys().FirstOrDefault();
     }
   }
 }
