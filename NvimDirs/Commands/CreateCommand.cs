@@ -38,7 +38,7 @@ namespace Commands
 
     public void Execute()
     {
-      var homeDirPath = GetHomeDirPath();
+      var homeDirPath = CommandUtils.GetHomeDirPath();
 
       Console.WriteLine($"Creating default dirs at '{homeDirPath}'");
       if(Args.Count > 0 && Args.ContainsKey("--nuke"))
@@ -77,20 +77,6 @@ namespace Commands
       Directory.SetCurrentDirectory("../..");
       CreateDirIfNotExist("plugin");
       Console.WriteLine("Done");
-    }
-
-    private string GetHomeDirPath()
-    {
-      var userDirPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-      var configPath = ".config";
-
-      if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-      {
-        configPath = "AppData/Local/";
-      }
-      var homeDirPath = Path.Combine(userDirPath, configPath);
-
-      return homeDirPath;
     }
 
     private void CreateFileIfNotExist(string fileName)

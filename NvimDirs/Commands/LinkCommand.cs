@@ -34,6 +34,15 @@ namespace Commands
 
     public void Execute()
     {
+      var nvimDirName = "nvim";
+      var homeDirPath = CommandUtils.GetHomeDirPath();
+      var moveUp = "../../../..";
+      var dotfilesRepoDirPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, moveUp);
+      var nvimDirPath = Path.GetFullPath(Path.Combine(dotfilesRepoDirPath, nvimDirName));
+      var targetNvimDirPath = Path.Combine(homeDirPath, nvimDirName);
+
+      File.CreateSymbolicLink(targetNvimDirPath, nvimDirPath);
+      Console.WriteLine($"Dotfiles' Nvim config was symlinked at '{targetNvimDirPath}'");
     }
   }
 }
