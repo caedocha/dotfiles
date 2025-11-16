@@ -46,9 +46,11 @@ if(parsedArgs.HasCommands())
   }
   else
   {
-    var command = parsedArgs.GetCommand() switch
+    ICommand command = parsedArgs.GetCommand() switch
     {
       "create" => new CreateCommand(parsedArgs),
+      "link" => new LinkCommand(parsedArgs),
+      _ => throw new ArgumentException(nameof(command))
     };
     command.Execute();
   }

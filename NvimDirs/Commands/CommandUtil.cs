@@ -4,7 +4,7 @@ namespace Commands
   {
     public static IList<ICommand> GetValidCommands()
     {
-      return new List<ICommand> { new CreateCommand() }.ToList();
+      return new List<ICommand> { new CreateCommand(), new LinkCommand() }.ToList();
     }
     public static IList<string> GetValidCommandNames()
     {
