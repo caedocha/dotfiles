@@ -52,7 +52,15 @@ if(parsedArgs.HasCommands())
       "link" => new LinkCommand(parsedArgs),
       _ => throw new ArgumentException(nameof(command))
     };
-    command.Execute();
+
+    if(parsedArgs.ContainsKey("--help"))
+    {
+      command.Help();
+    }
+    else
+    {
+      command.Execute();
+    }
   }
 }
 else
