@@ -11,3 +11,8 @@ vim.keymap.set("n", "<leader>w", function()
   vim.cmd("w!")
   print("Saved!")
 end)
+
+-- Toggle diagnostics
+vim.keymap.set("n", "<leader>td", function()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end)
