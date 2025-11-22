@@ -18,4 +18,8 @@ return require('packer').startup(function(use)
 
   use { "neovim/nvim-lspconfig" }
 
+  use { "mason-org/mason.nvim" }
+
+  use { "seblyng/roslyn.nvim" }
+
 end)
