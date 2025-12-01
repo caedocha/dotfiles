@@ -9,7 +9,10 @@ set.softtabstop = 2
 set.expandtab = true
 vim.g.mapleader = ","
 
--- LSP - Diagnostics signs
+---------------------------------------------
+-- LSP
+
+-- Diagnostics signs
 vim.diagnostic.config({
   signs = {
     text = {
@@ -20,3 +23,9 @@ vim.diagnostic.config({
     },
   },
 })
+
+-- Display diagnostics message
+vim.diagnostic.config({virtual_text  = true})
+
+-- END -LSP
+---------------------------------------------
