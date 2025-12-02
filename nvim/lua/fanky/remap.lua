@@ -1,3 +1,6 @@
+dap = require('dap')
+dap_view = require('dap-view')
+
 vim.keymap.set("n", "<leader>v", vim.cmd.Vex)
 vim.keymap.set("n", "<leader>s", vim.cmd.Sex)
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
@@ -16,3 +19,14 @@ end)
 vim.keymap.set("n", "<leader>td", function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end)
+
+-- DAP
+vim.keymap.set("n", "[f", dap.up)
+vim.keymap.set("n", "]f", dap.down)
+vim.keymap.set("n", "<F3>", dap_view.toggle)
+vim.keymap.set("n", "<F4>", function() dap.terminate({ hierarchy = true }) end)
+vim.keymap.set("n", "<F5>", dap.continue)
+vim.keymap.set("n", "<F9>", dap.toggle_breakpoint)
+vim.keymap.set("n", "<F6>", dap.step_over)
+vim.keymap.set("n", "<F7>", dap.step_into)
+vim.keymap.set("n", "<F8>", dap.step_out)
