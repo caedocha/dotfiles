@@ -22,4 +22,8 @@ return require('packer').startup(function(use)
 
   use { "seblyng/roslyn.nvim" }
 
+  -- DAP
+  use 'mfussenegger/nvim-dap'
+  use "igorlfs/nvim-dap-view"
+
 end)

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/fanky/.cache/nvim/packer_hererocks/2.1.1748459687/share/lua/5.1/?.lua;/home/fanky/.cache/nvim/packer_hererocks/2.1.1748459687/share/lua/5.1/?/init.lua;/home/fanky/.cache/nvim/packer_hererocks/2.1.1748459687/lib/luarocks/rocks-5.1/?.lua;/home/fanky/.cache/nvim/packer_hererocks/2.1.1748459687/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/fanky/.cache/nvim/packer_hererocks/2.1.1748459687/lib/lua/5.1/?.so"
+local package_path_str = "/home/fanky/.cache/nvim/packer_hererocks/2.1.1761727121/share/lua/5.1/?.lua;/home/fanky/.cache/nvim/packer_hererocks/2.1.1761727121/share/lua/5.1/?/init.lua;/home/fanky/.cache/nvim/packer_hererocks/2.1.1761727121/lib/luarocks/rocks-5.1/?.lua;/home/fanky/.cache/nvim/packer_hererocks/2.1.1761727121/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/fanky/.cache/nvim/packer_hererocks/2.1.1761727121/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -89,6 +89,16 @@ _G.packer_plugins = {
     path = "/home/fanky/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/mason-org/mason.nvim"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/fanky/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-view"] = {
+    loaded = true,
+    path = "/home/fanky/.local/share/nvim/site/pack/packer/start/nvim-dap-view",
+    url = "https://github.com/igorlfs/nvim-dap-view"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/fanky/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -108,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fanky/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["roslyn.nvim"] = {
+    loaded = true,
+    path = "/home/fanky/.local/share/nvim/site/pack/packer/start/roslyn.nvim",
+    url = "https://github.com/seblyng/roslyn.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
